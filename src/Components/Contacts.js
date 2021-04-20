@@ -19,6 +19,7 @@ const Contacts = () => {
               <th>Name</th>
               <th>Phone</th>
               <th>Email</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -37,6 +38,14 @@ const Contacts = () => {
                   </td>
                   <td>{contact.phone}</td>
                   <td>{contact.email}</td>
+                  <td>
+                    <a href="#">
+                      <span className="material-icons">edit</span>
+                    </a>
+                    <a href="#">
+                      <span className="material-icons">remove_circle</span>
+                    </a>
+                  </td>
                 </tr>
               ))
             }
