@@ -2,17 +2,19 @@ import React from 'react';
 import Navbar from './Components/Navbar';
 import Contact from './Components/Contacts';
 import './styles/App.scss';
+import {Provider} from "react-redux";
+import store from './store';
 
 function App() {
   return (
-    <div className="App"> 
-      <Navbar/>
-      <div className="container">
-        <div className="py-3">
-          <Contact/>
+    <Provider store={store}> 
+        <Navbar/>
+        <div className="container">
+          <div className="py-3">
+            <Contact/>
+          </div>
         </div>
-      </div>
-    </div>
+    </Provider>
   );
 }
 
