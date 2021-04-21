@@ -1,6 +1,8 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import Avatar from "react-avatar";
+import EditIcon from '@material-ui/icons/Edit';
+import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 
 const Contacts = () => {
   const contacts = useSelector(state => state.contacts);
@@ -38,12 +40,12 @@ const Contacts = () => {
                   </td>
                   <td>{contact.phone}</td>
                   <td>{contact.email}</td>
-                  <td>
+                  <td className="actions">
                     <a href="#">
-                      <span className="material-icons">edit</span>
+                      <span><EditIcon style={{color:"#333"}}/></span>
                     </a>
                     <a href="#">
-                      <span className="material-icons">remove_circle</span>
+                      <span className="mr-2"><RemoveCircleOutlineIcon style={{color:"red"}}/></span>
                     </a>
                   </td>
                 </tr>
