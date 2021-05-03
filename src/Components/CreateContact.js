@@ -3,21 +3,19 @@ import { Form, Button } from "react-bootstrap";
 
 const CreateContact = () => {
   return (
-    <div>
-      <h1>CREATE CONTACT!</h1>
+    <div className="card border-0 shadow">
+      <div className="card-header bg-danger">ADD NEW CONTACT!</div>
+      <div className="card-body">
       <Form>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Name</Form.Label>
           <Form.Control type="name" placeholder="Enter your name" />
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-        <Form.Label>Phone No.</Form.Label>
         <Form.Control type="phone" placeholder="Enter your Phone No." />
       </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter your email" />
         </Form.Group>
 
@@ -25,6 +23,7 @@ const CreateContact = () => {
           Create Contact
         </Button>
       </Form>
+    </div>
     </div>
   );
 };
